@@ -1,5 +1,5 @@
-#模拟实现len
-'''
+# 模拟实现len
+"""
 def my_len(data):
     count = 0;
     for i in data:
@@ -7,9 +7,9 @@ def my_len(data):
     return count;
 length = my_len(input("请输入"));
 print(length);
-'''
+"""
 
-#add函数
+# add函数
 '''
 def add(x,y):
     return x + y;
@@ -20,7 +20,7 @@ b = int(input("请输入第二个数："));
 print(f"{a} + {b} = {add(a,b)}");
 '''
 
-#练习：查体温
+# 练习：查体温
 '''
 def temp(num):
     if num >= 37.5:
@@ -30,14 +30,14 @@ def temp(num):
 temp(num = int(input("请输入您的体温")))
 '''
 
-#python中函数都是有返回值的。如果不写返回语句的话还是会返回none
+# python中函数都是有返回值的。如果不写返回语句的话还是会返回none
 '''
 def test( ):
     a = 5;
 print(f"函数默认返回值为{test()}")
 
 '''
-#函数的说明文档.鼠标移动到函数即可查看函数文档说明
+# 函数的说明文档.鼠标移动到函数即可查看函数文档说明
 '''
 def add(x,y):
     \'''
@@ -51,8 +51,8 @@ def add(x,y):
 add(5,9)
 '''
 
-#函数递归
-#将1234倒着输出，也就是4321
+# 函数递归
+# 将1234倒着输出，也就是4321
 '''
 def fun1(n):
     #先 % 10，得到最右边那一位，再除10，直到n//10=0，也就是变成一位数的时候
@@ -63,7 +63,7 @@ def fun1(n):
 fun1(1234)
 '''
 
-#global 变量（设置全局变量，常在函数中使用）
+# global 变量（设置全局变量，常在函数中使用）
 '''
 def test():
     global num;
@@ -71,7 +71,7 @@ def test():
 print(num);
 '''
 
-#ATM
+# ATM
 """
 money = 50000000;
 name = " "
@@ -110,7 +110,7 @@ while 1:
         break
 """
 
-#多重返回值
+# 多重返回值
 """
 def test():
     return 1,2,3
@@ -118,7 +118,7 @@ x,y,z = test()
 print(x,y,z)
 """
 
-#传参方式
+# 传参方式
 '''
 def user_info(name,age,gender = '男'):
     print(f"姓名为{name},年龄为{age},性别为{gender}")
@@ -137,7 +137,7 @@ user_info(age = age,name = name,gender = gender)
 user_info(name,age = age,gender = gender)
 '''
 
-#缺省参数 - 默认参数 - 在声明函数时设置默认值 - 只能在后面设置
+# 缺省参数 - 默认参数 - 在声明函数时设置默认值 - 只能在后面设置
 """
 def user_info(name,age,gender = '男'):
     print(f"姓名为{name},年龄为{age},性别为{gender}")
@@ -146,7 +146,7 @@ def user_info(name,age,gender = '男'):
 user_info(name = '1',age = 5)
 '''
 
-#函数作为参数传递
+# 函数作为参数传递
 """
 def compute(x,y):
     return x * y
@@ -157,6 +157,13 @@ print(test(compute()))
 """
 
 
+# 可以设置函数的参数类型,只会有提示的效果
+def count(x: int, y: int) -> int:
+    z = x + y
+    return z
 
 
-
+num = count('5', '6')       # 函数规定参数为整形,但使用字符型依旧不会出错
+print(num)
+num = count(5, 6)
+print(num)
