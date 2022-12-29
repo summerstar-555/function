@@ -163,7 +163,8 @@ def count(x: int, y: int) -> int:
     return z
 
 
-num = count('5', '6')       # 函数规定参数为整形,但使用字符型依旧不会出错
+num = count('5', '6')  # 函数规定参数为整形,但使用字符型依旧不会出错
 print(num)
 num = count(5, 6)
 print(num)
+# 结束
