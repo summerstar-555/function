@@ -158,6 +158,7 @@ print(test(compute()))
 
 
 # 可以设置函数的参数类型,只会有提示的效果
+'''
 def count(x: int, y: int) -> int:
     z = x + y
     return z
@@ -167,3 +168,11 @@ num = count('5', '6')  # 函数规定参数为整形,但使用字符型依旧不
 print(num)
 num = count(5, 6)
 print(num)
+'''
+
+
+# 函数的形参使用第三方库的类型
+# 声明形参的类型可以使用这个类型相应的的方法
+import requests
+def get_small_list(self, resp: requests.Response):
+    pass
