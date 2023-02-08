@@ -156,7 +156,6 @@ def test():
 print(test(compute()))
 """
 
-
 # 可以设置函数的参数类型,只会有提示的效果
 '''
 def count(x: int, y: int) -> int:
@@ -170,9 +169,27 @@ num = count(5, 6)
 print(num)
 '''
 
-
 # 函数的形参使用第三方库的类型
 # 声明形参的类型可以使用这个类型相应的的方法
+"""
 import requests
+
+
 def get_small_list(self, resp: requests.Response):
     pass
+"""
+
+
+# 声明变量出错: 未解析的引用
+"""
+from multiprocessing import Value  # 
+import multiprocessing.sharedctypes  # 需要加上这句代码
+
+
+def fun1(shared: multiprocessing.sharedctypes.Synchronized):    # 否则这里的声明会出错
+    pass
+
+
+share = Value('i', 0)
+print(type(share))
+"""
